@@ -1,0 +1,22 @@
+// This won't work
+<p v-if="showMe">The if text</p>
+<p>Some text related to the if text</p>
+<p v-else>The else text</p>
+
+// Nor will this
+<div>
+    <p v-if="showMe">The if text</p>
+</div>
+<div>
+    <p v-else>The else text</p>
+</div>
+
+// Instead, consider grouping
+<div v-if="showMe">
+    <p>The if text</p>
+    <p>Some text related to the if text</p>
+</div>
+<div v-else>
+    <p>The else text</p>
+</div>
+
